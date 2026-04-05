@@ -12,14 +12,15 @@ class Solution {
                 while(set.contains(x + maxLen)) {
                     maxLen++;
                 }
+                answer = Math.max(answer, maxLen);
             }
-            answer = Math.max(answer, maxLen);
         }
         return answer;
     }
 }
 
-
+//TC: O(n), where n is the length of nums (building the set is O(n), and iterating through unique elements with constant-time checks per element)
+//SC: O(n), for storing the elements in the HashSet
 
 //Example 1:
 //Input: nums = [100,4,200,1,3,2]
